@@ -1,0 +1,13 @@
+dimension,regla,resultado
+Completitud,Valores nulos (todas las columnas),0
+Unicidad,cita_id duplicado,0
+Unicidad,Filas duplicadas sin cita_id,618
+Validez,edad < 0,1
+Validez,edad > 100,7
+Validez,"discapacidad fuera de {0,1} (codificada 0–4)",199
+Consistencia temporal,fecha_cita anterior a fecha_agendamiento,5
+Precisión,fecha_cita sin hora (todas 00:00),110527
+Validez,paciente_id no entero (float corrupto),5
+Dominio,sexo: categorías,"F, M"
+Dominio,barrio: cardinalidad,81
+Dominio,días de la semana con citas,6

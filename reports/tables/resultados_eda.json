@@ -1,0 +1,220 @@
+{
+ "n_citas": 110527,
+ "n_pacientes": 62299,
+ "periodo_citas": [
+  "2016-04-29",
+  "2016-06-08"
+ ],
+ "periodo_agendamiento": [
+  "2015-11-10",
+  "2016-06-08"
+ ],
+ "calidad": {
+  "Valores nulos (todas las columnas)": 0,
+  "cita_id duplicado": 0,
+  "Filas duplicadas sin cita_id": 618,
+  "edad < 0": 1,
+  "edad > 100": 7,
+  "discapacidad fuera de {0,1} (codificada 0–4)": 199,
+  "fecha_cita anterior a fecha_agendamiento": 5,
+  "fecha_cita sin hora (todas 00:00)": 110527,
+  "paciente_id no entero (float corrupto)": 5,
+  "sexo: categorías": "F, M",
+  "barrio: cardinalidad": 81,
+  "días de la semana con citas": 6
+ },
+ "registros_excluidos": 6,
+ "pct_con_historial": 0.279,
+ "tasa_no_show": 0.2019,
+ "citas_por_paciente": {
+  "media": 1.77,
+  "p50": 1,
+  "p99": 8,
+  "max": 88,
+  "pct_pacientes_1_cita": 0.609
+ },
+ "antelacion": {
+  "mediana": 4.0,
+  "pct_mismo_dia": 0.349,
+  "asimetria": 2.67
+ },
+ "pct_sms": 0.321,
+ "bivariado": {
+  "antelacion_dias": 0.397,
+  "antelacion_cat": 0.295,
+  "mismo_dia": 0.283,
+  "sms_recibido": 0.126,
+  "edad": -0.088,
+  "grupo_edad": 0.085,
+  "barrio": 0.061,
+  "hipertension": 0.036,
+  "subsidio_bolsa_familia": 0.029,
+  "diabetes": 0.015,
+  "dia_semana": 0.014,
+  "discapacidad_bin": 0.007,
+  "sexo": 0.003,
+  "alcoholismo": 0.0
+ },
+ "tasa_por_antelacion": {
+  "0": 0.046,
+  "1–2": 0.227,
+  "3–7": 0.25,
+  "8–14": 0.305,
+  "15–30": 0.326,
+  "31–60": 0.342,
+  "61+": 0.284
+ },
+ "tasa_por_edad": {
+  "0–11": 0.202,
+  "12–17": 0.264,
+  "18–29": 0.246,
+  "30–44": 0.218,
+  "45–59": 0.179,
+  "60–74": 0.15,
+  "75+": 0.16
+ },
+ "tasa_por_sms": {
+  "0": 0.167,
+  "1": 0.276
+ },
+ "sms_or_crudo": 1.9,
+ "sms_or_mh": [
+  0.77,
+  0.74,
+  0.8
+ ],
+ "sms_min_antelacion": 3,
+ "or_ajustados": {
+  "antelacion_10d": {
+   "OR": 1.105,
+   "ic95_inf": 1.094,
+   "ic95_sup": 1.116,
+   "p_valor": 0.0
+  },
+  "mismo_dia": {
+   "OR": 0.12,
+   "ic95_inf": 0.114,
+   "ic95_sup": 0.127,
+   "p_valor": 0.0
+  },
+  "edad_10a": {
+   "OR": 0.904,
+   "ic95_inf": 0.897,
+   "ic95_sup": 0.912,
+   "p_valor": 0.0
+  },
+  "sexo_F": {
+   "OR": 0.986,
+   "ic95_inf": 0.954,
+   "ic95_sup": 1.019,
+   "p_valor": 0.4
+  },
+  "subsidio": {
+   "OR": 1.302,
+   "ic95_inf": 1.238,
+   "ic95_sup": 1.37,
+   "p_valor": 0.0
+  },
+  "hipertension": {
+   "OR": 0.926,
+   "ic95_inf": 0.881,
+   "ic95_sup": 0.974,
+   "p_valor": 0.003
+  },
+  "diabetes": {
+   "OR": 1.121,
+   "ic95_inf": 1.047,
+   "ic95_sup": 1.201,
+   "p_valor": 0.001
+  },
+  "alcoholismo": {
+   "OR": 1.391,
+   "ic95_inf": 1.268,
+   "ic95_sup": 1.527,
+   "p_valor": 0.0
+  },
+  "discapacidad": {
+   "OR": 1.102,
+   "ic95_inf": 0.982,
+   "ic95_sup": 1.238,
+   "p_valor": 0.1
+  },
+  "sms_recibido": {
+   "OR": 0.837,
+   "ic95_inf": 0.81,
+   "ic95_sup": 0.866,
+   "p_valor": 0.0
+  },
+  "inasist_previas_ge1": {
+   "OR": 1.439,
+   "ic95_inf": 1.363,
+   "ic95_sup": 1.52,
+   "p_valor": 0.0
+  },
+  "sabado": {
+   "OR": 1.009,
+   "ic95_inf": 0.447,
+   "ic95_sup": 2.278,
+   "p_valor": 0.984
+  }
+ },
+ "tasa_por_inasist_previas": {
+  "0": 0.135,
+  "1": 0.196,
+  "2": 0.22,
+  "3+": 0.356
+ },
+ "n_con_historial": 30879,
+ "barrios_fuera_998": 11,
+ "n_barrios": 81,
+ "linea_base": [
+  {
+   "variables": "Sin historial",
+   "modelo": "Regresión logística",
+   "roc_media": 0.7155,
+   "pr_media": 0.3376,
+   "brier_media": 0.1459,
+   "recall_top30_media": 0.4997,
+   "roc_de": 0.0029,
+   "pr_de": 0.0059,
+   "brier_de": 0.0011,
+   "recall_top30_de": 0.0045
+  },
+  {
+   "variables": "Sin historial",
+   "modelo": "Gradient boosting (HGB)",
+   "roc_media": 0.7273,
+   "pr_media": 0.3568,
+   "brier_media": 0.1445,
+   "recall_top30_media": 0.5243,
+   "roc_de": 0.0029,
+   "pr_de": 0.0066,
+   "brier_de": 0.001,
+   "recall_top30_de": 0.0048
+  },
+  {
+   "variables": "Con historial del paciente",
+   "modelo": "Regresión logística",
+   "roc_media": 0.7203,
+   "pr_media": 0.3427,
+   "brier_media": 0.1452,
+   "recall_top30_media": 0.5039,
+   "roc_de": 0.003,
+   "pr_de": 0.0029,
+   "brier_de": 0.0011,
+   "recall_top30_de": 0.0046
+  },
+  {
+   "variables": "Con historial del paciente",
+   "modelo": "Gradient boosting (HGB)",
+   "roc_media": 0.7326,
+   "pr_media": 0.3639,
+   "brier_media": 0.1436,
+   "recall_top30_media": 0.5294,
+   "roc_de": 0.0035,
+   "pr_de": 0.005,
+   "brier_de": 0.0012,
+   "recall_top30_de": 0.0058
+  }
+ ]
+}
