@@ -4,7 +4,7 @@ Proyecto final de **MINE-4101 Ciencia de Datos Aplicada** (Universidad de los An
 
 **Repositorio:** https://github.com/Juliethr3/neuroagenda-minhalma
 
-**Integrantes:** _[Nombre integrante 1]_, _[Nombre integrante 2]_
+**Integrantes:** Julieth Dayanna Rodriguez Animero
 **Organización aliada:** MinHalma (centro ambulatorio de psicología, nutrición y fisioterapia) · **Stakeholder:** _[nombre y cargo]_
 
 ## Alcance
